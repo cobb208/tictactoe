@@ -4,12 +4,11 @@
  * Description: A simple tic-tac-toe game, first C program I have built.
  * Version: 0.1.1
  */
-#include "tictactoe.h"
+#ifndef TICTACTOE_TICTACTOE_H
+#define TICTACTOE_TICTACTOE_H
 
-int main()
-{
-    Game_loop();
-    Play_again();
-    return 0;
-}
 
+void Game_loop();
+void Play_again();
+
+#endif //TICTACTOE_TICTACTOE_H

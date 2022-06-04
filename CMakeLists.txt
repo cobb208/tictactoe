@@ -3,4 +3,4 @@ project(tictactoe C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(tictactoe main.c)
+add_executable(tictactoe main.c tictactoe.h tictactoe.c)
