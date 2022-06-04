@@ -8,8 +8,7 @@
 
 int main()
 {
-    Game_loop();
-    Play_again();
+    Main_game_loop();
     return 0;
 }
 

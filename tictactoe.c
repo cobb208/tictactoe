@@ -29,6 +29,7 @@ typedef struct Game {
 } Game;
 
 
+
 Game *Create_game()
 {
     Game *g = malloc(sizeof(Game) + (sizeof(char[BOARD_SIZE])));
@@ -251,9 +252,10 @@ void Game_loop()
     } while(game->winner == 0);
 
     Destroy_game(game);
+
 }
 
-void Play_again()
+int Play_again()
 {
     printf("Play again? Y?");
 
@@ -264,6 +266,19 @@ void Play_again()
 
     if(line_buffer[0] == 'y' || line_buffer[0] == 'Y')
     {
+        return 1;
+    }
+
+    return 0;
+}
+
+void Main_game_loop()
+{
+    int play_again = 1;
+
+    while(play_again == 1)
+    {
         Game_loop();
+        play_again = Play_again();
     }
 }

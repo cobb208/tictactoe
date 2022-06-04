@@ -8,7 +8,6 @@
 #define TICTACTOE_TICTACTOE_H
 
 
-void Game_loop();
-void Play_again();
+void Main_game_loop();
 
 #endif //TICTACTOE_TICTACTOE_H
